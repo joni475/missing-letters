@@ -1,0 +1,18 @@
+function fearNotLetter(str) {
+let alphabet = "abcdefghijklmnopqrstuvwxyz";
+let start = alphabet.indexOf(str[0]);
+let mainAlphabet = alphabet.slice(start);
+for(let i=0; i<str.length; i++){
+    if(str[i] !== mainAlphabet[i]){
+      str = mainAlphabet[i];
+     } if(alphabet.length == str.length){
+      return undefined;
+     }
+}
+return str;
+}
+
+console.log(fearNotLetter("stvwx"));
+console.log(fearNotLetter("bcdf"));
+console.log(fearNotLetter("abce"));
+console.log(fearNotLetter("abcdefghijklmnopqrstuvwxyz"))
